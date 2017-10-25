@@ -8,6 +8,36 @@ function squareSum(numbers){
     return result;
   }
 
+//alternative solution:
+function square_sum(numbers){
+    return numbers.reduce(function(sum, n){
+        return (n*n) + sum;
+    }, 0)
+}
+
+
+
+//alternative solution:
+function squareSum2(numbers){
+    return numbers.map(square).reduce(sum);
+}
+function square(number){
+    return number * number;
+}
+function sum(firstNum, secondNum){
+    return firstNum + secondNum;
+}
+
+
+
+//alternative solution:
+function squareSum3(numbers){
+    numbers.forEach(function(n){
+        sum += n * n;
+    });
+    return sum;
+}
+
   //Tests
   squareSum([1, 7.25, 2]);
   squareSum([7, 4, 2, 5]);
