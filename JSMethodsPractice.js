@@ -3,16 +3,17 @@
 function isBigEnough(element) {
     return element >= 15;
   }
-  
   [12, 5, 8, 130, 44].findIndex(isBigEnough); 
   // index of 4th element in the Array is returned,
   // so this will result in '3'
+
 
 //.filter()
 //The filter() method creates a new array with all elements that pass the test implemented by the provided function.
 [12,5,8,120,44,65].filter(function(element){
     return element > 12;
 })
+
 
 //.valueof()
 //The valueOf() method returns the primitive value of the specified object.  example: object.valueOf()
@@ -23,6 +24,7 @@ var object = {
     mommies: 'notForSale'
 }
 object.valueOf()
+
 
 //.split()
 /*The split() method splits a String object into an array of strings by separating the string into substrings,
@@ -40,6 +42,7 @@ The sort is not necessarily stable. The default sort order is according to strin
 //sorts by numbers, then words alphabetically
 [12,15,'babies', 75,'autographs', 65].sort();
 
+
 //.slice()
 /*The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included).
 The original array will NOT be modified.
@@ -55,16 +58,21 @@ var array = [12,15,16.55,21,42,'babies'];
 array.slice(0,2)
 console.log('original array unaffected', array)
 
+
+
 //array.length
 //returns the number of ITEMS in an array. Not based on 0 indexing, just returns the total number of items.
 
 //get the last item in an array
 //array[array.length-1]
 
+
+
 //Math.round()
 //The Math.round() function returns the value of a number rounded to the nearest integer.
 Math.round(24.25);
 Math.round(array[2]);
+
 
 //.reverse()
 //The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
@@ -89,11 +97,12 @@ str.replace(regexp|substr, newSubstr|function)*/
  syntax: 
  * str: String
  * count: Number
- 
+
 let resultString = str.repeat(count);*/
 
 'babies'.repeat(3)
 //returns 'babiesbabiesbabies'
+
 
 
 //.reduce()
@@ -111,6 +120,7 @@ array.reduce(function(acc, currVal){
     return acc * currVal;
 })
 
+
 //Math.random()
 /*The Math.random() function returns a floating-point, pseudo-random number in the range [0, 1);
 that is, from 0 (inclusive) up to but not including 1 (exclusive), which you can then scale to your desired range.
@@ -124,6 +134,14 @@ parseInt('24');
 parseInt('24', 10);
 parseInt('24', 26); //second param is a "radix"
 
+//numObj.toString()
+//The toString() method returns a string representing the specified Number object.
+
+//Math.pow()
+//The Math.pow() function returns the base to the exponent power, that is, baseexponent.
+//Math.pow(base, exponent)
+Math.pow(7,2);
+
 
 //.find()
 // The find() method returns a value in the typed array, if an element satisfies the provided testing function. Otherwise undefined is returned. TypedArray is one of the typed array types here.
@@ -131,6 +149,7 @@ console.log('.find()')
 [1,2,3].find(function(element){
     return element > 2;
 })
+
 
 //.map()
 //The map() method creates a new array with the results of calling a provided function on every element in the calling array.
@@ -144,6 +163,8 @@ console.log('.find()')
 
 [12,15,'babies',32,84].map(Math.sqrt)
 
+
+
 //typeof
 //The typeof operator returns a string indicating the type of the unevaluated operand.
 typeof 24;
@@ -155,10 +176,14 @@ typeof {
     }
 }
 
+
+
 //isNaN()
 //The isNaN() function determines whether a value is NaN or not.
 isNaN('string');
 isNaN(24);
+
+
 
 //.includes()
 //The includes() method determines whether an array includes a certain element, returning true or false as appropriate.
@@ -167,13 +192,19 @@ isNaN(24);
 [12,15,14,18,16,'babies'].includes(14);
 [12,15,14,18,16,'babies'].includes('14');
 
+
+
 //.toLowerCase()
 //The toLowerCase() method returns the calling string value converted to lower case.
 'StRInG'.toLowerCase()
 
+
+
 //.toUpperCase()
 //The toUpperCase() method returns the calling string value converted to upper case.
 'StRInG'.toUpperCase()
+
+
 
 //.indexOf()
 //The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present.
@@ -200,12 +231,18 @@ array.splice(start, deleteCount, item1, item2, ...)*/
 //The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
 [12,15,16,18,17,'babies'].pop();
 
+
+
 //.push()
 //adds an item to the end of an array.
+
+
 
 //.unshift()
 //The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
 [12,12,12,12,12].unshift('babiesForSale', 'mommiesNotForSale');
+
+
 
 //.shift()
 //The shift() method removes the first element from an array and returns that element. This method changes the length of the array.
